@@ -249,6 +249,8 @@ svg {
   line-height: 21px;
   padding-bottom: 15px;
   text-transform: none;
+  padding-left: 30px;
+
 }
 .footerStyles_links_col_2__Qv075 {
   color: #fff;
@@ -256,6 +258,8 @@ svg {
   font-size: 15px;
   margin-bottom: 0px;
   text-decoration: none;
+  padding-left: 30px;
+
 }
 .footerStyles_footer_col_3__y6BD4 {
   color: #828282;
@@ -276,63 +280,25 @@ svg {
   font-size: 13px;
   padding: 30px 0 16px;
 }
-.footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center items horizontally */
-  text-align: center; /* Center text */
-}
-
-.footer .mainfooter {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center items horizontally */
-}
-
-.footerStyles_footer_main__QPqPA {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center items horizontally */
-}
-
-.footerStyles_footer_col_2__2aZ3f {
-  margin-top: 1rem; /* Add some spacing between the columns */
-}
-
-.footerStyles_quick_links__x5m9e {
-  margin-top: 1rem; /* Add some spacing between Quick Links and other links */
-}
-
-.footerStyles_footer_col_3__y6BD4 {
-  margin-top: 1rem; /* Add some spacing between the columns */
-}
-
-@media only screen and (min-width: 768px) {
-  .footer {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start; /* Align items to the start */
-    text-align: left; /* Align text to the left */
-  }
-
-  .footer .mainfooter {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start; /* Align items to the start */
-  }
-
+@media screen and (max-width: 767px) {
   .footerStyles_footer_main__QPqPA {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start; /* Align items to the start */
+    grid-template-columns: 1fr; /* Change to single column layout */
   }
 
   .footerStyles_footer_col_2__2aZ3f {
-    margin-top: 0; /* Remove the top margin */
+    order: 1; /* Change the order of this element */
+    margin-top: 1rem; /* Add some spacing */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footerStyles_footer_main__QPqPA {
+    grid-template-columns: 1fr 2fr; /* Restore original layout */
   }
 
-  .footerStyles_footer_col_3__y6BD4 {
-    margin-top: 0; /* Remove the top margin */
+  .footerStyles_footer_col_2__2aZ3f {
+    margin-top: 0; /* Remove top margin */
+    order: 2; /* Restore original order */
   }
 }
 .footer img {
@@ -349,7 +315,7 @@ svg {
 
 
 .coreteam{
-  padding: 60px;;
+  padding: 60px;
 }
 
 .meetteam{
@@ -1026,6 +992,36 @@ button {
   }
 
 }
+
+/* .requiredstyle{
+  display: grid;
+  padding: 10px;
+} */
+/* .footerStyles_footer_col_2__2aZ3f {
+  display: block;
+  margin: 0;
+} */
+/* @media only screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer .mainfooter {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footerStyles_footer_main__QPqPA {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+} */
+/* .footer img {
+  max-width: 100%; /* Set maximum width to 100% of the container */
+  /* height: auto; Maintain aspect ratio */
+/* } */ 
+
 
 
 
